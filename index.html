@@ -27,29 +27,35 @@
       border: none;
     }
   </style>
-</head>
-<body>
 
-<div class="container">
-  <h2 id="status">Checking service availability...</h2>
-  <div id="content"></div>
-</div>
+  <script>
+    function loadPage() {
+      var releaseDate = new Date(2026, 3, 1, 0, 0, 0); // April 1, 2026
+      var now = new Date();
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var releaseDate = new Date(2026, 2, 1, 0, 0, 0); // April 1, 2026
-    var now = new Date();
+      var status = document.getElementById("status");
+      var content = document.getElementById("content");
 
-    var status = document.getElementById("status");
-    var content = document.getElementById("content");
+      if (!status || !content) {
+        alert("DOM not available");
+        return;
+      }
 
-    if (now < releaseDate) {
-      status.textContent = "Service Temporarily Unavailable";
-      content.innerHTML =
-        "<p>Due to high volume, WiFi signal harmonization is temporarily unavailable.</p>" +
-        "<p>Please check back in 24 hours.</p>";
-    } else {
-      status.textContent = "Optimizing Signal...";
-      content.innerHTML =
-        '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0" ' +
-        'allow="autoplay; encrypted-media
+      if (now < releaseDate) {
+        status.innerText = "Service Temporarily Unavailable";
+        content.innerHTML =
+          "<p>Due to high volume, WiFi signal harmonization is temporarily unavailable.</p>" +
+          "<p>Please check back in 24 hours.</p>";
+      } else {
+        status.innerText = "Optimizing Signal...";
+        content.innerHTML =
+          '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0" ' +
+          'allow="autoplay; encrypted-mediaoadPage()">
+
+  <div class="container">
+    <h2 id="status">Checking service availability...</h2>
+    <div id="content"></div>
+  </div>
+
+</body>
+</html>
