@@ -1,61 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>WiFi Signal Harmonization</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #ffffff;
-      color: #333333;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .container {
-      max-width: 520px;
-      padding: 24px;
-    }
-    iframe {
-      width: 100%;
-      height: 315px;
-      border: none;
-    }
-  </style>
+  <title>JS Test</title>
 
   <script>
-    function loadPage() {
-      var releaseDate = new Date(2026, 3, 1, 0, 0, 0); // April 1, 2026
-      var now = new Date();
+    alert("JavaScript executed");
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.innerHTML =
+        "<h1>JavaScript is running</h1>";
+    });
+  </script>
+</head>
 
-      var status = document.getElementById("status");
-      var content = document.getElementById("content");
-
-      if (!status || !content) {
-        alert("DOM not available");
-        return;
-      }
-
-      if (now < releaseDate) {
-        status.innerText = "Service Temporarily Unavailable";
-        content.innerHTML =
-          "<p>Due to high volume, WiFi signal harmonization is temporarily unavailable.</p>" +
-          "<p>Please check back in 24 hours.</p>";
-      } else {
-        status.innerText = "Optimizing Signal...";
-        content.innerHTML =
-          '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0" ' +
-          'allow="autoplay; encrypted-mediaoadPage()">
-
-  <div class="container">
-    <h2 id="status">Checking service availability...</h2>
-    <div id="content"></div>
-  </div>
-
+<body>
+  <h1>If you see this only, JS did not run</h1>
 </body>
 </html>
