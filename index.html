@@ -10,19 +10,17 @@
       font-family: Arial, Helvetica, sans-serif;
       background-color: #ffffff;
       color: #333333;
+      margin: 0;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
       text-align: center;
     }
-
     .container {
       max-width: 520px;
       padding: 24px;
     }
-
     iframe {
       width: 100%;
       height: 315px;
@@ -32,29 +30,26 @@
 </head>
 <body>
 
-<div class="container" id="content">
-  <h2>Checking service availability...</h2>
+<div class="container">
+  <h2 id="status">Checking service availability...</h2>
+  <div id="content"></div>
 </div>
 
 <script>
-  try {
-    // April 1, 2026 (month is zero-based)
-    var releaseDate = new Date(2026, 2, 1, 0, 0, 0);
+  document.addEventListener("DOMContentLoaded", function () {
+    var releaseDate = new Date(2026, 3, 1, 0, 0, 0); // April 1, 2026
     var now = new Date();
+
+    var status = document.getElementById("status");
     var content = document.getElementById("content");
 
     if (now < releaseDate) {
+      status.textContent = "Service Temporarily Unavailable";
       content.innerHTML =
-        "<h1>Service Temporarily Unavailable</h1>" +
         "<p>Due to high volume, WiFi signal harmonization is temporarily unavailable.</p>" +
         "<p>Please check back in 24 hours.</p>";
     } else {
+      status.textContent = "Optimizing Signal...";
       content.innerHTML =
         '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0" ' +
-        'allow="autoplay; encrypted-mediad("content").innerHTML =
-      "<p>Unable to load service status.</p>";
-  }
-</script>
-
-</body>
-</html>
+        'allow="autoplay; encrypted-media
