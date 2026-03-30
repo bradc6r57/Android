@@ -1,11 +1,60 @@
-<!DOCTYPE html><  <body>
-    <h1>GitHub Pages Test</h1>
-    <p>If you see this, Pages is working.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WiFi Signal Harmonization</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 520px;
+      padding: 24px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" id="content">
+  <h2>Checking service availability...</h2>
+</div>
+
+<script>
+  try {
+    // April 1, 2026 (month is zero-based)
+    var releaseDate = new Date(2026, 3, 1, 0, 0, 0);
+    var now = new Date();
+    var content = document.getElementById("content");
+
+    if (now < releaseDate) {
+      content.innerHTML =
+        "<h1>Service Temporarily Unavailable</h1>" +
+        "<p>Due to high volume, WiFi signal harmonization is temporarily unavailable.</p>" +
+        "<p>Please check back in 24 hours.</p>";
+    } else {
+      content.innerHTML =
+        '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0" ' +
+        'allow="autoplay; encrypted-mediad("content").innerHTML =
+      "<p>Unable to load service status.</p>";
+  }
+</script>
+
+</body>
 </html>
-``
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Test</title>
-  </head>
